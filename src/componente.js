@@ -6,7 +6,7 @@ function Componentes() {
       <header className="App-header">
        <div>
         <p> hola gente</p>
-        <img src={ImgIco}/>
+        <img src={ImgIco} alt="perrito"/>
        </div>
       </header>
     </div>
