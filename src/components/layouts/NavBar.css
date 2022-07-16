@@ -1,4 +1,30 @@
 
+
+
 .NavBG{
-    background-color: rgb(175, 102, 243);
+    background-color: #646093;
   }
+
+.Betty{
+  max-height: 50px;
+  max-width: 50px;
+}
+
+.Cart1{
+  color: rgba(253, 241, 108, 0.845);
+  font-size: 20px;
+  font-weight: 500;
+  justify-content: center;
+}
+
+.Product_add{
+  color: rgba(253, 241, 108, 0.845);
+  font-size: 20px;
+}
+
+
+.Product_add2{
+  text-align: center;
+  color: rgba(253, 241, 108, 0.845);
+  font-size: 20px;
+}

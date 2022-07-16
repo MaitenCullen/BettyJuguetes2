@@ -1,20 +1,26 @@
 
 import {Navbar, Nav, Container, NavDropdown} from 'react-bootstrap';
 import {Outlet, Link} from 'react-router-dom';
+import Cart from './CartWidget';
+import AddProduct from './ItemListContainer';
+import LogoBetty from './Logo';
+import BettyLogo from './Logo';
 import './NavBar.css';
 
 const NavBarExample = () => {
   return (
     <>
-    <Navbar className='NavBG'  expand="lg">
+
+    <Navbar className='NavBG justify-content-center' >
       <Container>
-      <img
+        <img
               alt=""
               src="../../../logo192.png"
               width="30"
               height="30"
               className="d-inline-block align-top"
             />{' '}
+         <LogoBetty/>
         <Navbar.Brand as={Link} to='/'> La Betty React
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -36,6 +42,8 @@ const NavBarExample = () => {
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
+        <Cart/>
+        <AddProduct question="compras algo?" response="claro que si" />
       </Container>
     </Navbar>
     <section>
