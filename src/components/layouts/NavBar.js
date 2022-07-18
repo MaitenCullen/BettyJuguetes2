@@ -11,7 +11,7 @@ const NavBarExample = () => {
   return (
     <>
 
-    <Navbar className='NavBG justify-content-center' >
+    <Navbar className='NavBG' >
       <Container>
         <img
               alt=""

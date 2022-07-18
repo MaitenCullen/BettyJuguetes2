@@ -20,8 +20,8 @@ function App() {
         <Route path='Products' element={<Products/>}/>
         <Route path='Contact' element={<Contact/>}/> 
     </Routes>
-      <Hello people="linda" edad={28}/>
-      <Hello people="fea" edad="15"/>
+      <Hello people="linda" age={28}/>
+      <Hello people="fea" age="15"/>
     </BrowserRouter>
     </div>
   );

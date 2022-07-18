@@ -1,15 +1,15 @@
 import React, { Fragment } from "react";
 
-const Hello = (props) => {
-    console.log(props)
+
+//aca recibo props opciones desestructurarla como se ve, o pasar props y llamarlas props.people//
+
+const Hello = ({people, age}) => {
+    
     return (
         <Fragment>
             <h2>
-                Hola gente {props.people}
+                Hola gente {people} tu edad es {age}
             </h2>
-            <h3>
-                tu edad es {props.edad}
-            </h3>
         </Fragment>
     );
 }
