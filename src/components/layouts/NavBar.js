@@ -1,11 +1,10 @@
 
 import {Navbar, Nav, Container, NavDropdown} from 'react-bootstrap';
 import {Outlet, Link} from 'react-router-dom';
-import Cart from './CartWidget';
-import AddProduct from './ItemListContainer';
+
 import LogoBetty from './Logo';
-import BettyLogo from './Logo';
 import './NavBar.css';
+
 
 const NavBarExample = () => {
   return (
@@ -24,7 +23,7 @@ const NavBarExample = () => {
         <Navbar.Brand as={Link} to='/'> La Betty React
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse className='col-1' id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as={Link} to='/'>Inicio</Nav.Link>
             <Nav.Link as={Link} to='/Products' >Productos</Nav.Link>
@@ -42,8 +41,7 @@ const NavBarExample = () => {
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
-        <Cart/>
-        <AddProduct question="compras algo?" response="claro que si" />
+        
       </Container>
     </Navbar>
     <section>

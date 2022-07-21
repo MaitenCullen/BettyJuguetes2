@@ -4,13 +4,9 @@ import './NavBar.css';
 
 function Cart() {
   return (
-    <div className="App">
-      
-       <div>
-       <p className='Cart1'> añadir al <GiShoppingCart/> </p>
+       <div className='Cart_Div'>
+      <GiShoppingCart className='Cart1'/>
        </div>
-     
-    </div>
   );
 }
 

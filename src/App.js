@@ -7,6 +7,8 @@ import NavBarExample from './components/layouts/NavBar'
 import Contact from './components/Contact'
 import TestOne from './components/TestOne';
 import Hello from './components/Hello';
+import AddProduct from './components/layouts/ItemListContainer';
+import ItemCount from './components/ItemCount';
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
         <Route path='Products' element={<Products/>}/>
         <Route path='Contact' element={<Contact/>}/> 
     </Routes>
+    <div className='div_app_product'>
+    <AddProduct question="compras algo?" response= {<ItemCount/>}/>
+    </div>
       <Hello people="linda" age={28}/>
       <Hello people="fea" age="15"/>
     </BrowserRouter>

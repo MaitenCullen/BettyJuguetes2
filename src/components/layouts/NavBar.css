@@ -12,13 +12,18 @@
 
 .Cart1{
   color: rgba(253, 241, 108, 0.845);
-  font-size: 20px;
-  font-weight: 500;
-  justify-content: center;
+  font-size: 30px;
 }
-
-.Product_add{
+.Cart_Div{
+  display: flex;
+  flex-wrap: nowrap;
+}
+#Product_add{
   color: rgba(253, 241, 108, 0.845);
-  font-size: 20px;
+  font-size: 15px;
+  padding: 0px;
 }
-
+.item_cart{
+  background-color:  #646093;
+  padding: 5px;
+}
