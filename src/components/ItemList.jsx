@@ -9,7 +9,7 @@ const ItemList = (props) => {
   return (
     <>
     {props.productos.map(((item) => (
-        <Item titulo={item.Producto} imagen={item.imagen} key = {item.id}/>
+        <Item titulo={item.Producto} imagen={item.imagen} key = {item.id} descripcion={item.Descripcion}/>
     )))}
     
     </>

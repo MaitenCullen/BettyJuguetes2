@@ -20,6 +20,7 @@ const Item = (props) => {
       <Card.Body className='item_cart'>
         <Card.Title>{props.titulo}</Card.Title>
         <Card.Text>
+          {props.descripcion}
         <p id="Product_add">
                 {/* rendering condicional varias opciones */}
                 {message === '' || <p> {message}</p>}
