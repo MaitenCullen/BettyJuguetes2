@@ -1,6 +1,6 @@
 
 
-import BettyLogo from '../../img/LogoBetty1.jpg';
+import BettyLogo from '../../imgSRC/LogoBetty1.jpg';
 import './NavBar.css';
 
 
