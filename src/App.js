@@ -6,25 +6,27 @@ import Products from "./components/Products";
 import NavBarExample from './components/layouts/NavBar'
 import Contact from './components/Contact'
 import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import Cart from './components/Cart';
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 
 
 function App() {
-
-// const imagenP = require(`./img/${productos[1].imagen}`);
   return (
     <div className='App'>
-
-    <BrowserRouter>
-    {/* <img src={imagenP}/>  */}
-    <NavBarExample/>
-    <Routes>
-      <Route path='/' element={<Home/>}/> 
-        <Route path='Products' element={<Products/>}/>
-        <Route path='Contact' element={<Contact/>}/> 
-    </Routes>
-    <ItemListContainer/>
-    </BrowserRouter>
+      <NavBarExample/>
+      <section className='center'>
+        <Routes>
+          <Route path='/' element={<ItemListContainer/>}/> 
+          <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+          <Route path='/category/:category' element={<ItemListContainer/>}/> 
+          <Route path='/cart' element={<Cart/>}/>
+          <Route path='/Contact/' element={<Contact/>}/>
+          <Route path='*' element ={<ItemListContainer/>}/>
+        </Routes>
+      </section>
     </div>
   );
 }

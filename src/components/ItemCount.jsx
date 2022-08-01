@@ -32,11 +32,12 @@ const ItemCount = (props) => {
     return (
         <>
         <div className='cart_date'>
-            <Cart/>
+            
             {counter}
             <ImMinus className='btn_style' onClick={substract}/>
+            <Cart/>
             <ImPlus className='btn_style' onClick={addProduct}/>
-            <p id='P_date'> fecha y hs del click: {DateAndTime} </p>
+            <p> fecha y hs del click: {DateAndTime} </p>
         </div>
        {/* uso Funcion Anonima para que no se me ejecute automaticamente el counter porque eso hace react y asi escribo menos */}
        <Button id='button_product' onClick={()=> props.onAdd(counter)}>Agregar al carrito </Button>
