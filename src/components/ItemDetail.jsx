@@ -41,20 +41,21 @@ console.log(props, "item")
         </div>
         <span className="stock"> hay stock</span>
         <p className="price">{item.precio}</p>
+        <div className="text_products">
+          <p id="Product_add">
+                    {/* rendering condicional varias opciones */}
+                    {message === '' || <p> {message}</p>}
+                    {/* {message && <p> {message} </p>}
+                    {message === "" ? "" : <p> {message}</p>} */}
+            </p>
+            <div className="action">
+            <ItemCount initial={0} stock ={10} onAdd={onAdd}/>
+            </div>
+          </div>
       </div>
     </div>
     <div className="card_footer">
-      <div className="text_products">
-      <p id="Product_add">
-                {/* rendering condicional varias opciones */}
-                {message === '' || <p> {message}</p>}
-                {/* {message && <p> {message} </p>}
-                {message === "" ? "" : <p> {message}</p>} */}
-        </p>
-      </div>
-      <div className="action">
-      <ItemCount initial={0} stock ={10} onAdd={onAdd}/>
-      </div>
+      
     </div>
   </div>
   )

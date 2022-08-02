@@ -73,5 +73,5 @@ export const getItem=(id) =>  new Promise ((resolve) => {
                 if (condition){
                     resolve(Productos.find(producto => producto.id === parseInt(id)))
                 }
-            },2000 )
+            },1000 )
 })

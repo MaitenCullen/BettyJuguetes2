@@ -17,6 +17,15 @@
   height: 280px;
 }
 
+#button_detail{
+  background-color: rgb(251, 228, 198);
+  color: #3e3b59;
+  border: #c0bbff;
+}
+#button_detail:hover{
+ background-color: rgba(205, 190, 171, 0.618) ;
+ 
+}
 /*ItelList*/
 
 .card1{
@@ -30,7 +39,7 @@
 /*Item Count*/
 .btn_style{
     cursor: pointer;
-    color: burlywood;
+    color: rgb(255, 202, 133);
     font-size: 30px;
     margin: 5px;
     padding: 5px;
@@ -43,27 +52,26 @@
 }
 
 #button_product {
-  background-color: #a09dbf;
-  color:rgb(251, 228, 198);
+  background-color: #6f6aa3;
+  color:rgb(255, 198, 122);
   border: #3e3b59;
 }
 
 #button_product:hover {
-  background-color:  #282638b6;
+  background-color: rgba(39, 9, 46, 0.652);
 }
 
 
 #button_product:active {
   border-color: aliceblue;
   color: aliceblue;
-  box-shadow: 3px 3px 5px white;
 }
 
 
 
 /*CART CART WIDGET*/
 .Cart1{
-  color: rgba(253, 241, 108, 0.845);
+  color: rgb(234, 160, 12);
   font-size: 30px;
 }
 .Cart_Div{

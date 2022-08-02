@@ -18,7 +18,7 @@ const Item = (props) => {
           <Card.Text>
             {props.descripcion}
           </Card.Text>       
-          <Button> Aca Click </Button>
+          <Button id='button_detail'> Detalles </Button>
         </Card.Body>
       </Card>    
     </Link>
