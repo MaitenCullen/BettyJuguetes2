@@ -9,11 +9,14 @@ import { BsStars } from "react-icons/bs";
 
 const ItemDetail =(props) => {
   const [message, setMessage] = useState (false)
+ 
   const onAdd = (cantidad) => {
       setMessage(`agregaste ${cantidad} items carrito`)
+      console.log("cuantos productos hay", cantidad);
   }
+
   const item = props.producto
-console.log(props, "item")
+
   return (
   <div className="card">
     <div className="card_body">
@@ -47,7 +50,7 @@ console.log(props, "item")
                     {message === '' || <p> {message}</p>}
                     {/* {message && <p> {message} </p>}
                     {message === "" ? "" : <p> {message}</p>} */}
-            </p>
+            </p> 
             <div className="action">
             <ItemCount initial={0} stock ={10} onAdd={onAdd}/>
             </div>
@@ -55,7 +58,6 @@ console.log(props, "item")
       </div>
     </div>
     <div className="card_footer">
-      
     </div>
   </div>
   )

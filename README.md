@@ -1,6 +1,11 @@
 # Betty Juguetes y Placeres App
 
+
 Betty Juguetes y Placeres es una e-commerce diseñada para el proyecto final de CoderHouse en donde utilizo HTML5, CSS3, librerias variadas y Javascript en React js 
+
+## Gif proyecto
+- link de navegación
+<img src="https://i.ibb.co/VDmPbBW/Animation.gif" alt="Animation"></a>
 
 ## Como instalar?
 link para crear app-->[Create React App](https://github.com/facebook/create-react-app).
@@ -29,6 +34,7 @@ Bootstrap: 5.1.3
 ReactBoostrap: 2.4.0
 NodeJS: 16.14.0
 react-icons: 4.4.0
+spinners-react: 1.0.7
 Visual Studio Code: 1.65.2
 
 ## Contacto
