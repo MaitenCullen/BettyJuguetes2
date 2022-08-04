@@ -1,9 +1,9 @@
 
 import {Navbar, Nav, Container, NavDropdown} from 'react-bootstrap';
 import {Outlet, Link} from 'react-router-dom';
-
 import LogoBetty from './Logo';
 import './NavBar.css';
+import CartWidget from './CartWidget';
 
 
 const NavBarExample = () => {
@@ -26,22 +26,23 @@ const NavBarExample = () => {
         <Navbar.Collapse className='col-1' id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as={Link} to='/'>Inicio</Nav.Link>
-            <Nav.Link as={Link} to='/Products' >Productos</Nav.Link>
             <Nav.Link as={Link} to='/Contact' >Contacto</Nav.Link>
             <NavDropdown title="Clikea amigo" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Dale click</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                cosita 1
+              <NavDropdown.Item as={Link} to='/'>Productos</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to='/lubricantes'>
+                lubricantes
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Muchas cosas</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                cosita 2
+              <NavDropdown.Item as={Link} to='/anales'>
+                anales
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to='/vibradores'>vibradores</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to='/masturbadores'>
+                masturbadores
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
-        
+        <CartWidget/>
       </Container>
     </Navbar>
     <section>

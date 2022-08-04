@@ -2,9 +2,12 @@ import React, { useEffect, useState } from 'react';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
 import  { getItem } from './mock/Productos';
+import { SpinnerRoundOutlined} from 'spinners-react';
+import './styleItem.css';
+
 
 const ItemDetailContainer = () => {
-  const [producto, setProducto] = useState({})
+  const [producto, setProducto] = useState()
   const { id } = useParams()
 
   useEffect(()=> {
@@ -19,9 +22,7 @@ const ItemDetailContainer = () => {
     .catch((error) => console.log(error));        
   },[id])
   return (
-    <div>
-      <ItemDetail producto={producto}/>
-    </div>
+    producto ? <ItemDetail producto={producto}/> : < SpinnerRoundOutlined size='100px' color='#8963c6'/>
   )
 }
 

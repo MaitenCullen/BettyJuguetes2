@@ -13,6 +13,7 @@ const ItemList = (props) => {
             <Item 
               key = {item.id} 
               id={item.id} 
+              category={item.category}
               titulo={item.Producto}
               imagen={item.imagen} 
               descripcion={ item.Descripcion}

@@ -8,17 +8,17 @@ import ItemList from './ItemList';
 import { useEffect } from 'react';
 
 
+
 const ItemListContainer = () => {
 
 const [listaProductos, setListaProductos] = useState([])
 const { category } = useParams();
-console.log("holi", category);
+
 useEffect(()=> {
     getProducts
         .then((response) => {
-            console.log("lallala", response)
             if (category) {
-                setListaProductos(response.find((producto) => producto.id === category)
+                setListaProductos(response.filter((producto) => producto.category === category)
                 );
             } else {
                 setListaProductos(response)
@@ -30,7 +30,7 @@ useEffect(()=> {
 return (
         
         <div className='div_app_product'>
-            <ItemList productos={listaProductos}/>  
+            <ItemList productos={listaProductos}/> 
         </div>
     );
 
