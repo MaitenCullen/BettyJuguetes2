@@ -5,7 +5,7 @@ Betty Juguetes y Placeres es una e-commerce diseñada para el proyecto final de 
 
 ## Gif proyecto
 - link de navegación
-![Alt Text](https://ibb.co/mBx430b)
+<a href="https://ibb.co/VDmPbBW"><img src="https://i.ibb.co/VDmPbBW/Animation.gif" alt="Animation"></a>
 ## Como instalar?
 link para crear app-->[Create React App](https://github.com/facebook/create-react-app).
 Instalación para React Js:
