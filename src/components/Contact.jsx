@@ -4,6 +4,7 @@ import './components.css';
 
 const Contact = () =>{
     return (
+    <div>
         <div className='contact_section'>
             <h1>
             Contactate
@@ -12,6 +13,7 @@ const Contact = () =>{
                 <img className="chose_img" src={chose} alt=""/>
             </div>
         </div>
+    </div>
     )
 }
 

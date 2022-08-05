@@ -22,7 +22,7 @@ const ItemDetailContainer = () => {
     .catch((error) => console.log(error));        
   },[id])
   return (
-    producto ? <ItemDetail producto={producto}/> : < SpinnerRoundOutlined size='100px' color='#8963c6'/>
+    producto ? <ItemDetail producto={producto}/> : < SpinnerRoundOutlined size='100px' color='#8963c6' height='100%'/>
   )
 }
 

@@ -49,10 +49,10 @@
             imagen: '/img/lubriVegan1.jpg'
         },
         {
-            id: 4,
+            id: 6,
             Producto:"Bolas Kegel",
             Descripcion: "Bolitas kegel para suelo pelvico",
-            category: "salud",
+            category: "saludSexual",
             detalle: "Con un tamaño de 3,3 cm de diámetro y 16 cm de largo, son perfectas para ejercitar los musculos del suelo pelvico. Se pueden sacar las bolitas internas por si deseas usarla con menos peso. Cada bolita pesa 39 gramos. Fabricado con silicona hipoalergénica.",
             precio: "$2.000",
             imagen: '/img/bolasKegel1.jpg'

@@ -1,3 +1,5 @@
+
+
 /*Item*/
 .link_style {
  text-decoration: none;
@@ -61,6 +63,7 @@
   border: #3e3b59;
 }
 
+
 #button_product:hover {
   background-color: rgba(39, 9, 46, 0.652);
 }
@@ -107,4 +110,29 @@
     width: 450px;
     height: 500px;
     box-shadow: 0 0 10px #634790;
+    margin: 10px;
+  }
+
+
+  /*HOME */ 
+
+  .img_home{
+    width: 750px;
+    height: 500px;
+    box-shadow: 0 0 10px #634790;
+    margin: 10px;
+  }
+  .home_class{
+  display: flex;
+  justify-content: center;
+    
+  }
+  .section_home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section_home p {
+    text-align: center;
+    font-size: 20px;
   }

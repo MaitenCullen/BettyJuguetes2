@@ -10,6 +10,18 @@
   pointer-events: none;
 }
 
+.card_footer {
+  padding: 20px 20px;
+  display: flex;
+  flex-flow: row no-wrap;
+  align-items: center;
+  position: relative;
+  background-color:#646093;
+  color:rgb(251, 228, 198);
+  border-top: solid 3px #997bca ;
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

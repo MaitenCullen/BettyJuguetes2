@@ -8,22 +8,22 @@ import Button from 'react-bootstrap/Button';
 
 
 const ItemCount = (props) => {
-    const [counter, setCounter] = useState(props.initial)
+   
     let today = new Date();
 
     const [DateAndTime, setDateAndTime] = useState("");
     
     const addProduct =() => {
         setDateAndTime(today.toLocaleString());
-        if (counter < props.stock){
-            setCounter(counter + 1)
+        if (props.counter < props.stock){
+            props.setCounter(props.counter + 1)
         }
     }
     const substract = () => {
         setDateAndTime(today.toLocaleString());
-        if (counter > 0){
+        if (props.counter > 0){
             
-            setCounter(counter - 1)
+            props.setCounter(props.counter - 1)
         }
         
     }
@@ -36,11 +36,14 @@ const ItemCount = (props) => {
             <Cart/>
             <ImPlus className='btn_style' onClick={addProduct}/>
             </div>
-            <p>{counter} </p>
+            <p>{props.counter} </p>
             <p>fecha y hs del click: {DateAndTime} </p>
         </div>
-       {/* uso Funcion Anonima para que no se me ejecute automaticamente el counter porque eso hace react y asi escribo menos */}
-       <Button id='button_product' onClick={()=> props.onAdd(counter)}>Agregar al carrito </Button>
+        {/* uso Funcion Anonima para que no se me ejecute 
+        automaticamente el counter 
+        porque eso hace react y asi escribo menos.*/}
+       <Button id='button_product' onClick={()=> props.onAdd(props.counter)}>Agregar al carrito </Button>
+        
         </>
         
        

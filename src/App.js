@@ -6,6 +6,7 @@ import Contact from './components/Contact'
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart';
+import Home from './components/Home';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
@@ -18,6 +19,7 @@ function App() {
       <section className='center'>
         <Routes>
           <Route path='/' element={<ItemListContainer/>}/> 
+          <Route path='/Home' element={<Home/>}/> 
           <Route path='/item/:id' element={<ItemDetailContainer/>}/>
           <Route path='/:category' element={<ItemListContainer/>}/> 
           <Route path='/cart' element={<Cart/>}/>
@@ -25,6 +27,8 @@ function App() {
           <Route path='*' element ={<ItemListContainer/>}/>
         </Routes>
       </section>
+      <div className="card_footer">
+      </div>
     </div>
   );
 }
