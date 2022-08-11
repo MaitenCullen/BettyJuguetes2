@@ -4,9 +4,12 @@ import {Outlet, Link} from 'react-router-dom';
 import LogoBetty from './Logo';
 import './NavBar.css';
 import CartWidget from './CartWidget';
+import { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 
 
 const NavBarExample = () => {
+  const { cart } = useContext(CartContext);
   return (
     <>
 

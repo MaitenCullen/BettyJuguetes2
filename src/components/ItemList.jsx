@@ -7,9 +7,9 @@ import './components.css';
 const ItemList = (props) => {
   return (
     <>
-     {props.productos.map((item) => {
+     {props.productos.map((item, index) => {
         return (
-          <div className='card1'>
+          <div key={index} className='card1'>
             <Item 
               key = {item.id} 
               id={item.id} 

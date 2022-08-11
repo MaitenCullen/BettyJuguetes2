@@ -1,9 +1,12 @@
 
-
+.App{
+  height: 100%;
+}
 
 .center{
   display: flex;
   justify-content: center;
+  height: 100%;
 }
 .App-logo {
   height: 40vmin;
@@ -11,11 +14,10 @@
 }
 
 .card_footer {
-  padding: 20px 20px;
-  display: flex;
-  flex-flow: row no-wrap;
-  align-items: center;
-  position: relative;
+  display: block;
+  bottom:0;
+  width: 100%;
+  height: 40px;
   background-color:#646093;
   color:rgb(251, 228, 198);
   border-top: solid 3px #997bca ;
@@ -30,7 +32,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100%;
   /* display: flex;
   flex-direction: column;
   align-items: center;

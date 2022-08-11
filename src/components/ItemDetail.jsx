@@ -1,5 +1,5 @@
 
-import React from 'react';
+
 import './styleItem.css';
 import ItemCount from './ItemCount';
 import {useState} from 'react';
@@ -7,6 +7,9 @@ import { useNavigate } from 'react-router-dom';
 import './components.css';
 import Button from 'react-bootstrap/Button';
 import { BsStars } from "react-icons/bs";
+import { CartContext } from './context/CartContext';
+import React, { useContext } from 'react';
+  
 
 
 const ItemDetail =(props) => {
@@ -15,10 +18,20 @@ const ItemDetail =(props) => {
   const navigate = useNavigate ()
   const [ buyProduct, setBuyProduct] = useState (false)
 
+  const context = useContext(CartContext)
+  
+
   const onAdd = (cantidad) => {
     setMessage(`agregaste ${cantidad} items carrito`)
     setBuyProduct(true)
-    console.log("cuantos productos hay", cantidad);
+    const data = {
+      cantidad:cantidad,
+      producto:props.producto.Producto,
+      id:props.producto.id,
+      precio:props.producto.precio
+    }
+    context.addItem(data)
+
 }
 
 const item = props.producto
@@ -61,10 +74,10 @@ const item = props.producto
               {/* si buyProduct es true mostrame el boton, sino llevame a itemCount */}
             { buyProduct ?
             <div> 
-              <Button id='button_product1' onClick={()=>{navigate('./cart')}}> Ir al carrito</Button>
-              <Button id='button_product2'onClick={()=>{navigate('./itemListContainer')}}>Seguir comprando</Button>
+              <Button id='button_product1' onClick={()=>{navigate(`/Cart`)}}> Ir al carrito</Button>
+              <Button id='button_product2'onClick={()=>{navigate(`/`)}}>Seguir comprando</Button>
             </div>
-            : <ItemCount counter={counter} setCounter={setCounter} stock ={10} onAdd={onAdd}/>}
+            : <ItemCount counter={counter} setCounter={setCounter} stock ={10} onAdd={onAdd} />}
             </div>
           </div>
       </div>

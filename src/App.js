@@ -8,13 +8,15 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart';
 import Home from './components/Home';
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import CartProvider from './components/context/CartContext';
 
 
 
 function App() {
   return (
+    
     <div className='App'>
+    <CartProvider>
       <NavBarExample/>
       <section className='center'>
         <Routes>
@@ -29,7 +31,9 @@ function App() {
       </section>
       <div className="card_footer">
       </div>
+      </CartProvider> 
     </div>
+    
   );
 }
 
