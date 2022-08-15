@@ -28,10 +28,12 @@ const ItemDetail =(props) => {
       cantidad:cantidad,
       producto:props.producto.Producto,
       id:props.producto.id,
-      precio:props.producto.precio
+      precio:props.producto.precio,
+      imagen:props.producto.imagen,
+      descripcion:props.producto.Descripcion,
+      precioTotal:props.producto.precio*cantidad
     }
     context.addItem(data)
-
 }
 
 const item = props.producto
@@ -64,12 +66,12 @@ const item = props.producto
         <span className="stock"> hay stock</span>
         <p className="price">{item.precio}</p>
         <div className="text_products">
-          <p id="Product_add">
+          <div id="Product_add">
                     {/* rendering condicional varias opciones */}
                     {message === '' || <p> {message}</p>}
                     {/* {message && <p> {message} </p>}
                     {message === "" ? "" : <p> {message}</p>} */}
-            </p> 
+            </div> 
             <div className="action">
               {/* si buyProduct es true mostrame el boton, sino llevame a itemCount */}
             { buyProduct ?

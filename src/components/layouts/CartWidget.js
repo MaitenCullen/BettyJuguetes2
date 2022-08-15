@@ -10,8 +10,8 @@ function Cart() {
   return (
        <div className='Cart_Div'>
         <Link to={`./Cart`}>
-        <GiShoppingCart className='Cart1'/>
-         {context.cart.length}
+        <GiShoppingCart className='Cart1'/> 
+        {context.cart.length}
         </Link>
        </div>
   );

@@ -9,7 +9,9 @@ import { CartContext } from '../context/CartContext';
 
 
 const NavBarExample = () => {
-  const { cart } = useContext(CartContext);
+  const context = useContext(CartContext)
+
+  
   return (
     <>
 
@@ -49,7 +51,8 @@ const NavBarExample = () => {
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
-        <CartWidget/>
+        {context.cantInCard ?  <CartWidget /> : <></> }
+       
       </Container>
     </Navbar>
     <section>

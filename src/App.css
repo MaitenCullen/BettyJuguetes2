@@ -6,7 +6,7 @@
 .center{
   display: flex;
   justify-content: center;
-  height: 100%;
+  height: 100vh;
 }
 .App-logo {
   height: 40vmin;
@@ -14,7 +14,7 @@
 }
 
 .card_footer {
-  display: block;
+
   bottom:0;
   width: 100%;
   height: 40px;
