@@ -14,6 +14,7 @@ const addItem = (data) => {
 const isInCart = cart.some((productos) => productos.id === data.id);
  if ( !isInCart ) {
   setCart([...cart, data]);
+  cantInCard(data.cantidad)
   }
 }
 
@@ -35,12 +36,9 @@ const totalPrice = () => {
 
 }
 
-const cantInCard = () => {
-  let cardItem = 0;
- cart.map(producto => {
-  console.log(producto, "producto")
-  cardItem = cardItem + producto.cantidad;
- })
+const cantInCard = (cantidad) => {
+  let cardItem = !totalItems ? cantidad : totalItems + cantidad;
+
   setTotalItems(cardItem)
 }
 

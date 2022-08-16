@@ -51,7 +51,7 @@ const NavBarExample = () => {
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
-        {context.cantInCard ?  <CartWidget /> : <></> }
+        {context.cart.length ?  <CartWidget /> : <></> }
        
       </Container>
     </Navbar>

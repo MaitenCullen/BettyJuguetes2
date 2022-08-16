@@ -11,7 +11,7 @@ function Cart() {
        <div className='Cart_Div'>
         <Link to={`./Cart`}>
         <GiShoppingCart className='Cart1'/> 
-        {context.cart.length}
+        {context.totalItems}
         </Link>
        </div>
   );

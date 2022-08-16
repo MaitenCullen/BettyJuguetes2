@@ -34,6 +34,7 @@ const ItemDetail =(props) => {
       precioTotal:props.producto.precio*cantidad
     }
     context.addItem(data)
+    
 }
 
 const item = props.producto
