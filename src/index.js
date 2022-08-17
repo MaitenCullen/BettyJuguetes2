@@ -4,8 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { initializeApp } from "firebase/app";
 
-
+const firebaseConfig = {
+   apiKey: "AIzaSyCVRfwGTxN_Db3vVnOB9fyqKkEUIxSiBoo",
+   authDomain: "betty-juguetes-y-placeres.firebaseapp.com",
+   projectId: "betty-juguetes-y-placeres",
+   storageBucket: "betty-juguetes-y-placeres.appspot.com",
+   messagingSenderId: "1003110927840",
+   appId: "1:1003110927840:web:2947da214d1cdc2117ef85",
+ };
+ initializeApp(firebaseConfig);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  <BrowserRouter>

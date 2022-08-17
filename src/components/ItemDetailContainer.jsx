@@ -1,29 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
-import  { getItem } from './mock/Productos';
 import { SpinnerRoundOutlined} from 'spinners-react';
 import './styleItem.css';
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
+
 
 
 const ItemDetailContainer = () => {
-  const [producto, setProducto] = useState()
-  const { id } = useParams()
-
-  useEffect(()=> {
-    getItem(id)
-    .then((response) => {
-      if (id){
-        setProducto(response);
-      }else {
-        console.log("si no hay stock, hay error")
-      }
-    })
-    .catch((error) => console.log(error));        
-  },[id])
+	const {id} = useParams ()
+	console.log({id})
+	const [producto, setProducto] = useState()
+	useEffect(()=> {
+	  const db = getFirestore();
+	  const docRef = doc(db, 'productos', id) 
+	getDoc(docRef)
+	.then((snapshot) => {
+	  if (snapshot.exists()) { 
+		const data = {
+		  id: snapshot.id,
+		  ...snapshot.data()
+		}
+		setProducto(data)
+		console.log(data)
+	  }
+	})
+	.catch((error)=> console.error(error))
+	}, [id])
   return (
     producto ? <ItemDetail producto={producto}/> : < SpinnerRoundOutlined size='100px' color='#8963c6' height='100%'/>
   )
 }
 
+
 export default ItemDetailContainer
+
+
