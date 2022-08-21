@@ -4,6 +4,7 @@ import './components.css';
 import Cart from './layouts/CartWidget';
 import { ImPlus, ImMinus } from "react-icons/im";
 import Button from 'react-bootstrap/Button';
+import CartWidget from './layouts/CartWidget';
 
 
 
@@ -27,7 +28,7 @@ const ItemCount = (props) => {
         <div className='cart_date'>
             <div className='botons_cards'>
             <ImMinus className='btn_style' onClick={substract}/>
-            <Cart/>
+            <CartWidget/>
             <ImPlus className='btn_style' onClick={addProduct}/>
             </div>
             <p>{props.counter} </p>

@@ -1,9 +1,11 @@
 import { addDoc, collection, serverTimestamp} from 'firebase/firestore'
 import React, { useContext, useState } from 'react'
-import CartProvider, { CartContext } from './context/CartContext';
+import { CartContext } from './context/CartContext';
 import { db } from './firestore/Firestore';
+import { useNavigate } from 'react-router-dom';
 
 function Checkout() {
+    const navigate = useNavigate ()
     const context = useContext(CartContext)
     const[comprador, setComprador] = useState({})
     const [orderId, setOrderId] =useState('')
@@ -17,7 +19,6 @@ function Checkout() {
             [event.target.email]: event.target.value,
         })  
     }
-console.log(comprador)
 const terminarCompra =(event) => {
     event.preventDefault()
     const totalVentas = collection(db, "ventas")
@@ -30,7 +31,10 @@ const terminarCompra =(event) => {
          .then ((response) => {
             console.log("buenas", response)
             setOrderId(response.id)
-            context.clear()
+            console.log(context.cart, "total carrito")
+            if (response) {
+                context.clear()
+            }
         })
         .catch ((error)=> console.log(error))
     }
@@ -51,7 +55,7 @@ const terminarCompra =(event) => {
     <div>
         <h2> muchas gracias por confiar en nosotros</h2>
         <p> su numero de orden es: {orderId}</p>
-        <button> volver a inicio</button>
+        <button onClick={()=> navigate('/')}> volver a inicio</button>
     </div>}
     </>
   )

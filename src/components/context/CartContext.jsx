@@ -1,4 +1,3 @@
-import { data } from 'autoprefixer';
 import { useState } from 'react'
 import { createContext } from 'react'
 
@@ -24,7 +23,9 @@ function removeItem(id) {
 
 
 const clear = () => {
-setCart([])
+  setCart([])
+  setTotalItems(0)
+  setTotal(0)
 }
 
 const totalPrice = () => {
@@ -38,7 +39,6 @@ const totalPrice = () => {
 
 const cantInCard = (cantidad) => {
   let cardItem = !totalItems ? cantidad : totalItems + cantidad;
-
   setTotalItems(cardItem)
 }
 

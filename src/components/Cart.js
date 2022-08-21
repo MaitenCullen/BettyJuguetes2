@@ -7,10 +7,10 @@ import { useNavigate } from 'react-router-dom';
 
 
 
+
 const Cart = () => {
 const context = useContext(CartContext)
 const navigate = useNavigate ()
-
 return (
     <>
     {context.cart.length ? 
