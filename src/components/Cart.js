@@ -45,6 +45,7 @@ return (
         <div id="table_foot">
         <Button id='button_remove_all' onClick={context.clear}>Eliminar todo el carrito</Button>
         <Button onClick={context.totalPrice}>Total </Button> {context.cartTotal}
+        <Button onClick={()=> navigate('/Checkout')}> Finalizar compra </Button>
         </div>
     </div> : 
     <div>

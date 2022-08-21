@@ -9,6 +9,7 @@ import Cart from './components/Cart';
 import Home from './components/Home';
 import "bootstrap/dist/css/bootstrap.min.css";
 import CartProvider from './components/context/CartContext';
+import Checkout from './components/Checkout';
 
 
 
@@ -25,9 +26,10 @@ function App() {
           <Route path='/Home' element={<Home/>}/> 
           <Route path='/item/:id' element={<ItemDetailContainer/>}/>
           <Route path='/:category' element={<ItemListContainer/>}/> 
-          <Route path='/cart' element={<Cart/>}/>
+          <Route path='/Cart' element={<Cart/>}/>
           <Route path='/Contact/' element={<Contact/>}/>
           <Route path='*' element ={<ItemListContainer/>}/>
+          <Route path='/Checkout' element={<Checkout/>}/>
         </Routes>
       </section>
       <div className="card_footer">
