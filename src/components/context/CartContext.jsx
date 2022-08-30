@@ -6,15 +6,28 @@ export const CartContext = createContext({});
 
 const CartProvider = ({ children }) => {
 const [cart, setCart] = useState([])
-const [cartTotal, setTotal] = useState(0)
+const [cartTotal, setCartTotal] = useState(0)
 const [totalItems, setTotalItems] = useState(0)
 
+
+
 const addItem = (data) => {
-const isInCart = cart.some((productos) => productos.id === data.id);
- if ( !isInCart ) {
-  setCart([...cart, data]);
-  cantInCard(data.cantidad)
-  }
+  const isInCart = cart.find((producto)=> producto.id === data.id)
+  if(isInCart){
+      const updatedCart = cart.map((producto)=>{
+          if(producto.id === data.id){
+              return {...data, cantidad: producto.cantidad + data.cantidad}
+          }else{
+              return producto            
+          }
+      })
+      setCart(updatedCart)
+      cantInCard(data.cantidad)
+  }else{
+      setCart([...cart, data])
+      cantInCard(data.cantidad)
+      console.log(cart, "nueva cart")
+  }   
 }
 
 function removeItem(id) {
@@ -25,21 +38,21 @@ function removeItem(id) {
 const clear = () => {
   setCart([])
   setTotalItems(0)
-  setTotal(0)
+  setCartTotal(0)
 }
 
 const totalPrice = () => {
   let totalAmount = 0;
   cart.map(producto => {
-    totalAmount = totalAmount + producto.precioTotal;
+    totalAmount = totalAmount + (producto.cantidad * producto.precio);
   })
-  setTotal(totalAmount)
-
+  setCartTotal(totalAmount)
 }
 
 const cantInCard = (cantidad) => {
   let cardItem = !totalItems ? cantidad : totalItems + cantidad;
   setTotalItems(cardItem)
+  console.log("cant", cantidad, totalItems)
 }
 
 
