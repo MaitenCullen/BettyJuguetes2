@@ -40,19 +40,19 @@ const ItemDetail =(props) => {
 const item = props.producto
 
   return (
-  <div className="card">
+  <div>
     <div className="card_body">
       <div className="half">
         <div className="title">
           <h3 >{item.Producto}</h3>
-          <p>{item.Descripcion}</p>
         </div>
-        <div className="image">
-          <img src={item.imagen} alt=""/>
+        <div>
+          <img src={item.imagen} alt="" className='img_detail'/>
         </div>
       </div>
       <div className="half2">
         <div className="description">
+          <h4>{item.Descripcion}</h4>
           <p>{item.detalle}</p>
         </div>
         <div className="reviews">
@@ -65,7 +65,7 @@ const item = props.producto
           </ul>
         </div>
         <span className="stock"> hay stock</span>
-        <p className="price">{item.precio}</p>
+        <p className="price">${item.precio}</p>
         <div className="text_products">
           <div id="Product_add">
                     {/* rendering condicional varias opciones */}

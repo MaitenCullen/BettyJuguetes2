@@ -5,11 +5,11 @@
   /* CARD DETAIL */
 
   
-  .card {
+  /* .card {
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
     transition: 200ms;
     background: #fff;
-  }
+  } */
 
   .card_title h3 {
     flex: 0 1 200px;
@@ -23,71 +23,71 @@
   }
 
   .card_body {
-    padding: 0 40px;
+    /* padding: 0 40px; */
     display: flex;
     flex-flow: row no-wrap;
     margin-bottom: 25px;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
   }
   .card_body > .half {
-    width: 70%;
     font-size: 30px;
     text-align: center;
     box-sizing: border-box;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
   }
   .card_body > .half2{
-    width: 30%;
+    width: 50%;
     padding: 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     text-align: center;
-    box-sizing: border-box;
+    flex-direction: column;
   }
 
   .title h3{
-    font-size: 35px;
+    font-size: 40px;
     font-style: oblique;
-  }
-  .card_body .title p {
-    margin: 5px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: #260e4c;
-    font-weight: 300;
-    margin-bottom: 5px;
+    padding: 20px;
+    margin: 10px;
   }
 
-.image {
-    box-shadow: 0 0 10px #634790;
-  }
- 
-  .card .card__body .description {
-    margin-bottom: 25px;
+
+ .img_detail{
+  width:450px;
+  height: 470px;
+  box-shadow:0 0 15px #634790;
+  border-radius: 5%;
+ }
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
   }
 .description p {
-    margin: 5px;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300;
-    line-height: 30px;
-    font-size: 30px;
-    color: rgb(9, 8, 8);
+  margin: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  line-height: 30px;
+  font-size: 20px;
+  width: 50%;
+  color: rgb(9, 8, 8);
+  }
+  .description h4{
+    font-size: 25px;
   }
   .card_body span.stock {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    font-size: 50px;
+    font-size: 30px;
     color: #7c3bd8;
   }
   /*ESTRELLAS*/
    .card_body .reviews .stars {
-    display: inline-
-    block;
+    display: inline-block;
     list-style: none;
     padding: 5px;
   }

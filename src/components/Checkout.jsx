@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react'
 import { CartContext } from './context/CartContext';
 import { db } from './firestore/Firestore';
 import { useNavigate } from 'react-router-dom';
-
+import './components.css';
 function Checkout() {
     const navigate = useNavigate ()
     const context = useContext(CartContext)
@@ -42,9 +42,9 @@ const terminarCompra =(event) => {
   return (
     <>
     {!orderId ?
-        <div>
+        <div className='form_div'>
         <h2> holii ya es el final de tu compra</h2>
-        <form onSubmit={terminarCompra}>
+        <form onSubmit={terminarCompra} className='form_style'>
             <input type="text" placeholder='nombre completo' name='name' onChange={datosComprador}/>
             <input type="text" placeholder='dirección de entrega' name='direction' onChange={datosComprador}/>
             <input type="number" placeholder='telefono' name='telefone' onChange={datosComprador}/>
@@ -52,7 +52,7 @@ const terminarCompra =(event) => {
             <button type='submit'>finalizar compra</button>
         </form>
     </div> :
-    <div>
+    <div className='order_div'>
         <h2> muchas gracias por confiar en nosotros</h2>
         <p> su numero de orden es: {orderId}</p>
         <button onClick={()=> navigate('/')}> volver a inicio</button>
