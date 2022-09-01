@@ -10,6 +10,9 @@ import Home from './components/Home';
 import "bootstrap/dist/css/bootstrap.min.css";
 import CartProvider from './components/context/CartContext';
 import Checkout from './components/Checkout';
+import SweetAlert from 'react-bootstrap-sweetalert';
+import ItemsCategory from './components/ItemsCategory';
+
 
 
 
@@ -18,11 +21,12 @@ function App() {
   return (
     
     <div className='App'>
+        {/* <SweetAlert/> */}
     <CartProvider>
       <NavBarExample/>
       <section className='center'>
         <Routes>
-          <Route path='/' element={<ItemListContainer/>}/> 
+          <Route path='/' element={<ItemsCategory/>}/> 
           <Route path='/Home' element={<Home/>}/> 
           <Route path='/item/:id' element={<ItemDetailContainer/>}/>
           <Route path='/:category' element={<ItemListContainer/>}/> 

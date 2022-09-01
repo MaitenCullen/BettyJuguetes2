@@ -48,6 +48,9 @@ const NavBarExample = () => {
               <NavDropdown.Item as={Link} to='/saludSexual'>
                 Salud Sexual
               </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to='/fetiche'>
+                Fetiche
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
