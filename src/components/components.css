@@ -10,13 +10,22 @@
   color:rgba(205, 190, 171, 0.618) ;
 }
 
-.item_cart{
+#item_cart{
   background-color:  #646093;
+  height: 200px;
   padding: 5px;
+  width: 280px;
 }
 
-.img_card{
-  height: 280px;
+#card_product{
+  max-height: 350px;
+}
+#img_card{
+  height: 300px;
+  width: 280px;
+}
+#img_card img{
+height: 300px;
 }
 
 #button_detail{
@@ -31,8 +40,7 @@
 /*ItelList*/
 
 .card1{
-  margin: 5px;
-  padding: 5px;
+  margin: 15px;
   width: 280px;
   text-align: center;
 }

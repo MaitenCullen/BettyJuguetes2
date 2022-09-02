@@ -11,9 +11,9 @@ const Item = (props) => {
   return (
     <div>
       <Link className="link_style" to={`/item/${props.id}`}>
-        <Card>
-        <Card.Img variant="top" src={props.imagen} className="img_card"/>
-        <Card.Body className='item_cart'>
+        <Card id='card_product'>
+        <Card.Img variant="top" src={props.imagen} id="img_card"/>
+        <Card.Body id='item_cart'>
           <Card.Title>{props.titulo}</Card.Title>
           <Card.Text>
             {props.descripcion}
