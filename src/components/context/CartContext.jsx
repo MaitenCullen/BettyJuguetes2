@@ -8,6 +8,8 @@ const CartProvider = ({ children }) => {
 const [cart, setCart] = useState([])
 const [cartTotal, setCartTotal] = useState(0)
 const [totalItems, setTotalItems] = useState(0)
+const [mayor, setMayor] = useState(false)
+const [menor, setMenor] = useState(false)
 
 
 
@@ -55,6 +57,10 @@ const cantInCard = (cantidad) => {
   console.log("cant", cantidad, totalItems)
 }
 
+const edadAdulta = (esMayor) => {
+ setMayor(esMayor)
+ console.log(mayor, "la edad")
+}
 
 const valueForChildren = {  
   cart,
@@ -65,6 +71,8 @@ const valueForChildren = {
   cartTotal,
   cantInCard,
   totalItems,
+  edadAdulta,
+  mayor,
 }
   return (
     <CartContext.Provider value={valueForChildren}>

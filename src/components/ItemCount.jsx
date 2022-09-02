@@ -1,7 +1,5 @@
 
-import {useState} from 'react';
 import './components.css';
-import Cart from './layouts/CartWidget';
 import { ImPlus, ImMinus } from "react-icons/im";
 import Button from 'react-bootstrap/Button';
 import CartWidget from './layouts/CartWidget';

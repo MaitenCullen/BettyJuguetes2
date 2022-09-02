@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import AlertBetty from './components/context/AlertContext';
+import CartProvider from './components/context/CartContext';
 
 
 
@@ -11,7 +13,9 @@ import { BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  <BrowserRouter>
+  <CartProvider>
     <App/>
+   </CartProvider>
  </BrowserRouter>
 
 );

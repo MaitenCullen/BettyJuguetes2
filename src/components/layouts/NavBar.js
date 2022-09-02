@@ -33,7 +33,7 @@ const NavBarExample = () => {
             <Nav.Link as={Link} to='/Home'>Inicio</Nav.Link>
             <Nav.Link as={Link} to='/Contact' >Contacto</Nav.Link>
             <NavDropdown title="Clikea amigo" id="basic-nav-dropdown">
-              <NavDropdown.Item as={Link} to='/'>Todos los productos</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to='/categorias'>Todos los productos</NavDropdown.Item>
               <NavDropdown.Item as={Link} to='/lubricantes'>
                 lubricantes
               </NavDropdown.Item>

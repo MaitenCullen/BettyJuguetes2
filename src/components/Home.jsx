@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './components.css';
 import home from '../imgSRC/home.jpg'
+import { CartContext } from './context/CartContext';
 
 
 

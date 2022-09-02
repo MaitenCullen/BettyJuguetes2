@@ -13,8 +13,6 @@ import './styleItem.css';
 const ItemsCategory = () => {
 const [listaImagenes, setListaImagenes] = useState([])
 
-// const { category } = useParams();
-
 useEffect(()=> {
 
     const docCategory = collection(db,'categorias')

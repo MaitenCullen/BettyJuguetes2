@@ -8,26 +8,30 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart';
 import Home from './components/Home';
 import "bootstrap/dist/css/bootstrap.min.css";
-import CartProvider from './components/context/CartContext';
+import CartProvider, { CartContext } from './components/context/CartContext';
 import Checkout from './components/Checkout';
-import SweetAlert from 'react-bootstrap-sweetalert';
 import ItemsCategory from './components/ItemsCategory';
+import AlertBetty from './components/context/AlertContext';
+import { useContext } from 'react';
 
 
 
 
 function App() {
-
+  const context = useContext(CartContext)
+  console.log(context, "el mayor")
   return (
     
     <div className='App'>
-        {/* <SweetAlert/> */}
-    <CartProvider>
+   
+      <AlertBetty/>
       <NavBarExample/>
+      hggyyt
+      {context.mayor ?
       <section className='center'>
         <Routes>
-          <Route path='/' element={<ItemsCategory/>}/> 
           <Route path='/Home' element={<Home/>}/> 
+          <Route path='/categorias' element={<ItemsCategory/>}/> 
           <Route path='/item/:id' element={<ItemDetailContainer/>}/>
           <Route path='/:category' element={<ItemListContainer/>}/> 
           <Route path='/Cart' element={<Cart/>}/>
@@ -36,9 +40,9 @@ function App() {
           <Route path='/Checkout' element={<Checkout/>}/>
         </Routes>
       </section>
+      : null}
       <div className="card_footer">
       </div>
-      </CartProvider> 
     </div>
     
   );
