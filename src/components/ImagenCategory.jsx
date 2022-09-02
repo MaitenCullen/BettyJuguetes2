@@ -13,9 +13,9 @@ function ImagenCategory(props) {
             return (
               <div key={imagen.imagen}>
                 <Link to={`/${item.category}`}>
-                <Card id='card_category'>
+                <div>
                     <Image  src={item.imagen} className='image_category'/>
-                </Card>                  
+                </div>                  
                 </Link>   
               </div>                
             );

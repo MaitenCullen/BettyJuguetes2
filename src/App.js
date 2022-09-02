@@ -30,6 +30,7 @@ function App() {
       {context.mayor === true  ?
       <section className='center'>
         <Routes>
+          <Route path='/' element={<Home/>}/> 
           <Route exact path='/Home' element={<Home/>}/> 
           <Route exact path='/categorias' element={<ItemsCategory/>}/> 
           <Route exact path='/item/:id' element={<ItemDetailContainer/>}/>

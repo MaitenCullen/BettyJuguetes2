@@ -5,25 +5,16 @@
   /* CARD DETAIL */
 
   
-  /* .card {
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
-    transition: 200ms;
-    background: #fff;
-  } */
-
-  #card_category{
-    width: 400px;
-    height: 450px;
-    margin: 10px;
-  }
   .div_category_imagen{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 10px;
   }
   .image_category{
-    width: 400px;
-    height: 450px;
+    width: 450px;
+    height: 500px;
+    margin: 10px;
   }
   .card_title h3 {
     flex: 0 1 200px;
@@ -37,12 +28,9 @@
   }
 
   .card_body {
-    /* padding: 0 40px; */
     display: flex;
     flex-flow: row no-wrap;
     margin-bottom: 25px;
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
   }

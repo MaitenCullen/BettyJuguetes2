@@ -11,15 +11,17 @@ const CartProducts = (producto) => {
     context.removeItem(id)
 }
   return (
-      <ol id='table_color'>
-        <li><img src={producto.imagen} alt="imagen producto" className='img_card_product'/></li>
-        <li>{producto.producto}</li>
-        <li>{producto.descripcion}</li>
-        <li>{producto.precio}</li>
-        <li>{producto.cantidad}</li>
-        <li>{producto.precioTotal}</li>
-        <li><Button id='button_remove' onClick={()=>removeProduct(producto.id)}>eliminar</Button></li>
-      </ol>
+    <div>
+       <ol className='table_color'>
+          <li><img src={producto.imagen} alt="imagen producto" className='img_card_product'/></li>
+          <li>{producto.producto}</li>
+          <li>{producto.precio}</li>
+          <li>{producto.cantidad}</li>
+          <li>{producto.precioTotal}</li>
+          <li><button id='button_remove' onClick={()=>removeProduct(producto.id)}>eliminar</button></li>
+        </ol>
+    </div>
+     
   )
 }
 

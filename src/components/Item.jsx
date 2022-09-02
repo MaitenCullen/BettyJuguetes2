@@ -9,18 +9,18 @@ import { Link } from 'react-router-dom';
 const Item = (props) => {
    
   return (
-    <div>
-      <Link className="link_style" to={`/item/${props.id}`}>
-        <Card id='card_product'>
-        <Card.Img variant="top" src={props.imagen} id="img_card"/>
-        <Card.Body id='item_cart'>
-          <Card.Title>{props.titulo}</Card.Title>
-          <Card.Text>
+    <div className='card_product'>
+      <Link id="link_style" to={`/item/${props.id}`}>
+        <div>
+        <img src={props.imagen} id="img_card"/>
+        <div id='item_cart'>
+          <p>{props.titulo}</p>
+          <p>
             {props.descripcion}
-          </Card.Text>       
+          </p>       
           <Button id='button_detail'> Detalles </Button>
-        </Card.Body>
-      </Card>    
+        </div>
+      </div>    
     </Link>
    </div>
   )

@@ -14,18 +14,14 @@ const navigate = useNavigate ()
 return (
     <>
     {context.cart.length ? 
-    <div id="table">
-        
-        <div >
-        <ul id="tr_style">
+    <div className="table1"> 
+        <ul className="tr_style">
             <li></li>
             <li>Producto</li>
-            <li>Descripcion</li>
             <li>Precio unitario</li>
             <li>Cantidad</li>
             <li>Precio total</li>
         </ul>
-        </div>
     <div>  
     {context.cart.map((producto, index)=> {
         return (
@@ -36,21 +32,20 @@ return (
                  precio={producto.precio}
                  producto={producto.producto}
                  imagen={producto.imagen}
-                 descripcion={producto.descripcion}
                  precioTotal={producto.precioTotal}
                  />
         );
     })}
      </div>
-        <div id="table_foot">
-        <Button id='button_remove_all' onClick={context.clear}>Eliminar todo el carrito</Button>
-        <Button onClick={context.totalPrice}>Total </Button> {context.cartTotal}
-        <Button onClick={()=> navigate('/Checkout')}> Finalizar compra </Button>
+        <div className="table_foot">
+        <button id="button01" onClick={context.clear}>Eliminar todo el carrito</button>
+        <button id="button02" onClick={context.totalPrice}>Total </button> {context.cartTotal}
+        <button id="button03" onClick={()=> navigate('/Checkout')}> Finalizar compra </button>
         </div>
     </div> : 
     <div>
         <p>El carrito esta vacio</p>
-        <Button id='button_product2'onClick={()=>navigate('/categorias')}>Ir a Comprar</Button>
+        <button id='button04'onClick={()=>navigate('/categorias')}>Ir a Comprar</button>
     </div>
 
     
