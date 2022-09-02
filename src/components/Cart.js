@@ -50,7 +50,7 @@ return (
     </div> : 
     <div>
         <p>El carrito esta vacio</p>
-        <Button id='button_product2'onClick={()=>{navigate(`/`)}}>Seguir comprando</Button>
+        <Button id='button_product2'onClick={()=>navigate('/categorias')}>Ir a Comprar</Button>
     </div>
 
     

@@ -78,7 +78,7 @@ const item = props.producto
             { buyProduct ?
             <div> 
               <Button id='button_product1' onClick={()=>{navigate(`/Cart`)}}> Ir al carrito</Button>
-              <Button id='button_product2'onClick={()=>{navigate(`/`)}}>Seguir comprando</Button>
+              <Button id='button_product2'onClick={()=>{navigate(`/categorias`)}}>Seguir comprando</Button>
             </div>
             : <ItemCount counter={counter} setCounter={setCounter} stock ={10} onAdd={onAdd} />}
             </div>

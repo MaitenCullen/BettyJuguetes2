@@ -8,7 +8,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart';
 import Home from './components/Home';
 import "bootstrap/dist/css/bootstrap.min.css";
-import CartProvider, { CartContext } from './components/context/CartContext';
+import { CartContext } from './components/context/CartContext';
 import Checkout from './components/Checkout';
 import ItemsCategory from './components/ItemsCategory';
 import AlertBetty from './components/context/AlertContext';
@@ -30,14 +30,13 @@ function App() {
       {context.mayor === true  ?
       <section className='center'>
         <Routes>
-          <Route path='/Home' element={<Home/>}/> 
-          <Route path='/categorias' element={<ItemsCategory/>}/> 
-          <Route path='/item/:id' element={<ItemDetailContainer/>}/>
-          <Route path='/:category' element={<ItemListContainer/>}/> 
-          <Route path='/Cart' element={<Cart/>}/>
-          <Route path='/Contact/' element={<Contact/>}/>
-          <Route path='*' element ={<ItemListContainer/>}/>
-          <Route path='/Checkout' element={<Checkout/>}/>
+          <Route exact path='/Home' element={<Home/>}/> 
+          <Route exact path='/categorias' element={<ItemsCategory/>}/> 
+          <Route exact path='/item/:id' element={<ItemDetailContainer/>}/>
+          <Route exact path='/:category' element={<ItemListContainer/>}/> 
+          <Route exact path='/Cart' element={<Cart/>}/>
+          <Route exact path='/Contact/' element={<Contact/>}/> 
+          <Route exact path='/Checkout' element={<Checkout/>}/>
         </Routes>
       </section>
       : context.mayor === false ? <NotAdult/> : null} 
