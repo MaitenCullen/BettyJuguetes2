@@ -13,6 +13,7 @@ import Checkout from './components/Checkout';
 import ItemsCategory from './components/ItemsCategory';
 import AlertBetty from './components/context/AlertContext';
 import { useContext } from 'react';
+import NotAdult from './components/layouts/NotAdult';
 
 
 
@@ -26,8 +27,7 @@ function App() {
    
       <AlertBetty/>
       <NavBarExample/>
-      hggyyt
-      {context.mayor ?
+      {context.mayor === true  ?
       <section className='center'>
         <Routes>
           <Route path='/Home' element={<Home/>}/> 
@@ -40,7 +40,7 @@ function App() {
           <Route path='/Checkout' element={<Checkout/>}/>
         </Routes>
       </section>
-      : null}
+      : context.mayor === false ? <NotAdult/> : null} 
       <div className="card_footer">
       </div>
     </div>

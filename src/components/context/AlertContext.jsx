@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import { createContext } from 'react';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import { CartContext } from './CartContext';
@@ -12,12 +11,9 @@ const AlertBetty = () => {
   context.edadAdulta(param)
   }
 
-  const onNotAdult = (param) => {
-    AlertDis()
-    onAdultClick(param)
-  }
-
+  
     const [show, setShow] = useState(true);
+  
     return (
       <>
         <Alert show={show} variant="success">
@@ -30,7 +26,7 @@ const AlertBetty = () => {
             <Button onClick={() => onAdultClick(true) } variant="outline-success" >
               SI! tengo + 18
             </Button>
-            <Button onClick={() => onNotAdult(false)}variant="outline-success" >
+            <Button onClick={() =>  onAdultClick(false) }variant="outline-success" >
             no, soy menor
             </Button>
           </div>
@@ -39,20 +35,5 @@ const AlertBetty = () => {
     );
 
 }
-const AlertDis = () => {
-    return (
-      <Alert>
-        <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
-        <p>
-          Change this and that and try again. Duis mollis, est non commodo
-          luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-          Cras mattis consectetur purus sit amet fermentum.
-        </p>
-      </Alert>
-    );
-  }
-
-
-
 
 export default AlertBetty;
