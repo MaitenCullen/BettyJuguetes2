@@ -53,14 +53,14 @@ const Contact = () =>{
                 <form onSubmit={contactDates} className='form_contact'>
                 <input type="text" placeholder='nombre completo' name='name' onChange={userProfile}/>
                 <input type="text" placeholder='localidad' name='direction' onChange={userProfile}/>
-                <textarea name="consulta" rows="5" cols="28" onChange={userProfile}>Deje su consulta acá</textarea>
+                <textarea name="consulta" rows="5" cols="28" onChange={userProfile} placeholder='Deje su consulta acá'></textarea>
                 <input type="number" placeholder='telefono' name='telefone' onChange={userProfile}/>
                 <input type="email" placeholder='cualestumail@example.com' name='email' onChange={userProfile}/>
                 <button type='submit' className='button_user'>Enviar mensaje</button>
                 </form> 
              </div> 
              : <div> <h2>Nos contactaremos a la brevedad</h2>
-                <p> tu numero de registro es {mesaje}</p>
+                <p> Tu mensaje se registro con el código: {mesaje}</p>
             </div>}
             <button onClick={()=> navigate('/')} className='button_contact'> volver a inicio</button>
             </div>

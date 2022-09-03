@@ -39,11 +39,11 @@ return (
      </div>
         <div className="table_foot">
         <button id="button01" onClick={context.clear}>Eliminar todo el carrito</button>
-        <button id="button02" onClick={context.totalPrice}>Total </button> {context.cartTotal}
+        <button id="button02" onClick={context.totalPrice}> Total </button> <span className="cart_total">{context.cartTotal}</span>
         <button id="button03" onClick={()=> navigate('/Checkout')}> Finalizar compra </button>
         </div>
     </div> : 
-    <div>
+    <div className="enty_cart">
         <p>El carrito esta vacio</p>
         <button id='button04'onClick={()=>navigate('/categorias')}>Ir a Comprar</button>
     </div>

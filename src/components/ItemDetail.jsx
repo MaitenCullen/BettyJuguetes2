@@ -66,15 +66,12 @@ const item = props.producto
         </div>
         <span className="stock"> hay stock</span>
         <p className="price">${item.precio}</p>
+        <p>Precio por unidad</p>
         <div className="text_products">
           <div id="Product_add">
-                    {/* rendering condicional varias opciones */}
                     {message === '' || <p> {message}</p>}
-                    {/* {message && <p> {message} </p>}
-                    {message === "" ? "" : <p> {message}</p>} */}
             </div> 
             <div className="action">
-              {/* si buyProduct es true mostrame el boton, sino llevame a itemCount */}
             { buyProduct ?
             <div> 
               <Button id='button_product1' onClick={()=>{navigate(`/Cart`)}}> Ir al carrito</Button>
