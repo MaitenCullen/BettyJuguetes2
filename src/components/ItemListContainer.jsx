@@ -9,9 +9,7 @@ import { collection, getDocs, getFirestore, query, where } from "firebase/firest
 
 
 const ItemListContainer = (props) => {
-
 const [listaProductos, setListaProductos] = useState([])
-
 const { category } = useParams();
 
 
@@ -30,16 +28,11 @@ useEffect(()=> {
 setListaProductos(listado)
     })
 },[category])
-
-return (
-        
-        <div className='div_app_product'>
-            <ItemList productos={listaProductos}/> 
-        </div>
+return (  
+    <div className='div_app_product'>
+        <ItemList productos={listaProductos}/> 
+    </div>
     );
-
 }
-
-
 
 export default ItemListContainer;

@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import { CartContext } from './CartContext';
-
+import '../layouts/NavBar.css'
 
 
 

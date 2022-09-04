@@ -17,9 +17,7 @@ const ItemDetail =(props) => {
   const [message, setMessage] = useState (false)
   const navigate = useNavigate ()
   const [ buyProduct, setBuyProduct] = useState (false)
-
   const context = useContext(CartContext)
-  
 
   const onAdd = (cantidad) => {
     setMessage(`agregaste ${cantidad} items carrito`)
@@ -38,7 +36,7 @@ const ItemDetail =(props) => {
 
 const item = props.producto
 
-  return (
+return (
   <div>
     <div className="card_body">
       <div className="half">
@@ -85,9 +83,6 @@ const item = props.producto
 }
 
 
-
-  
-
-export default ItemDetail
+export default ItemDetail;
 
 

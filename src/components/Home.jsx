@@ -1,5 +1,5 @@
 import './components.css';
-import home from '../imgSRC/home.jpg'
+import home from '../imgSRC/home.jpg';
 
 
 
@@ -27,4 +27,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Home;

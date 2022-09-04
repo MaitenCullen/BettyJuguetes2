@@ -20,32 +20,30 @@ const Contact = () =>{
             [event.target.email]: event.target.value,
         })  
     }
-    const contactDates =(event) => {
-        event.preventDefault()
-        const contactUser = collection(db, "contactoUsuario")
-        addDoc(contactUser, {
-            user,
-            fecha: serverTimestamp()
-             })
-             .then ((response) => {
-                setMesaje(response.id)
-             })
-            }
-
-
-    return (
-        <div className='contact_section'>
-            <div>
-                <h1>
-                Hola! Esperamos tu mensajito
-                </h1>
-            </div>
-            <div className='div_contact'>
+const contactDates =(event) => {
+    event.preventDefault()
+    const contactUser = collection(db, "contactoUsuario")
+    addDoc(contactUser, {
+        user,
+        fecha: serverTimestamp()
+            })
+            .then ((response) => {
+            setMesaje(response.id)
+            })
+}
+return (
+    <div className='contact_section'>
+        <div>
+            <h1>
+            Hola! Esperamos tu mensajito
+            </h1>
+        </div>
+        <div className='div_contact'>
             <div >
                 <img className="chose_img" src={chose} alt=""/>
             </div>
             {!mesaje ?
-             <div className='form_div_contact'>   
+                <div className='form_div_contact'>   
                 <form onSubmit={contactDates} className='form_contact'>
                 <input type="text" placeholder='nombre completo' name='name' onChange={userProfile}/>
                 <input type="text" placeholder='localidad' name='direction' onChange={userProfile}/>
@@ -54,15 +52,14 @@ const Contact = () =>{
                 <input type="email" placeholder='cualestumail@example.com' name='email' onChange={userProfile}/>
                 <button type='submit' className='button_user'>Enviar mensaje</button>
                 </form> 
-             </div> 
-             : <div> <h2>Nos contactaremos a la brevedad</h2>
+                </div> 
+                : <div> <h2>Nos contactaremos a la brevedad</h2>
                 <p> Tu mensaje se registro con el código: {mesaje}</p>
-            </div>}
+                </div>}
             <button onClick={()=> navigate('/')} className='button_contact'> volver a inicio</button>
-            </div>
-
         </div>
+    </div>
     )
 }
 
-export default Contact
+export default Contact;

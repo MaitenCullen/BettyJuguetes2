@@ -21,7 +21,6 @@ import NotAdult from './components/layouts/NotAdult';
 function App() {
   const context = useContext(CartContext)
   return (
-    
     <div className='App'>
       <NavBarExample/>
       <AlertBetty/>

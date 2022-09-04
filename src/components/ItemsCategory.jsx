@@ -3,9 +3,9 @@ import './components.css';
 import {useState} from 'react';
 import { useEffect } from 'react';
 import { collection, getDocs,} from "firebase/firestore";
-import ImagenCategory from './ImagenCategory';
 import { db } from './firestore/Firestore';
 import './styleItem.css';
+import ImageCategory from './ImageCategory';
 
 
 
@@ -14,7 +14,6 @@ const ItemsCategory = () => {
 const [listaImagenes, setListaImagenes] = useState([])
 
 useEffect(()=> {
-
     const docCategory = collection(db,'categorias')
     getDocs(docCategory)
     .then((snapshot)=>{
@@ -26,14 +25,11 @@ useEffect(()=> {
     })
 },[])
 
-
-    return (
-        <div className='div_category_imagen'>
-            <ImagenCategory category={listaImagenes}/>
-        </div>
-    )
-
-
+return (
+    <div className='div_category_imagen'>
+        <ImageCategory category={listaImagenes}/>
+    </div>
+)
 }
 
 export default ItemsCategory;

@@ -62,25 +62,25 @@
 
 export const  getProducts =  new Promise ((resolve, reject) => {
     //que hace la promesa, x fuera setTimeout no es necesario es solo practica para simular lo que el dato tarda
-        let condition = true
-                setTimeout(() => {
-                    if (condition){
-                        resolve(Productos)
-                    } else {
-                        reject ("algo salio mal")
-                    }
-                },2000 )
-            
-            })
+let condition = true
+        setTimeout(() => {
+            if (condition){
+                resolve(Productos)
+            } else {
+                reject ("algo salio mal")
+            }
+        },2000 )
+    
+    })
 
 
 export const getItem=(id) =>  new Promise ((resolve) => {
 
-    let condition = true
-            setTimeout(() => {
-                if (condition){
-                    resolve(Productos.find(producto => producto.id === parseInt(id)))
-                }
-                
-            },2000 )
+let condition = true
+        setTimeout(() => {
+            if (condition){
+                resolve(Productos.find(producto => producto.id === parseInt(id)))
+            }
+            
+        },2000 )
 })

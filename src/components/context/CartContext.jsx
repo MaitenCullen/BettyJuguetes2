@@ -46,7 +46,7 @@ const clear = () => {
 const totalPrice = () => {
   let totalAmount = 0;
   cart.map(producto => {
-    totalAmount = totalAmount + (producto.cantidad * producto.precio);
+    return totalAmount = totalAmount + (producto.cantidad * producto.precio);
   })
   setCartTotal(totalAmount)
 }

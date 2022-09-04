@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React from 'react';
 import Item from './Item';
 import './components.css';
 
@@ -25,4 +25,4 @@ const ItemList = (props) => {
   );
 }
 
-export default ItemList
+export default ItemList;

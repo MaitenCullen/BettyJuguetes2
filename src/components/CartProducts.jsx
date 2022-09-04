@@ -1,6 +1,5 @@
 
 import './components.css';
-import Button from 'react-bootstrap/Button';
 import { CartContext } from './context/CartContext';
 import React, { useContext } from 'react';
 
@@ -21,8 +20,7 @@ const CartProducts = (producto) => {
           <li><button id='button_remove' onClick={()=>removeProduct(producto.id)}>eliminar</button></li>
         </ol>
     </div>
-     
   )
 }
 
-export default CartProducts
+export default CartProducts;
