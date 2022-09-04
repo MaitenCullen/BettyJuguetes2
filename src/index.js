@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import AlertBetty from './components/context/AlertContext';
 import CartProvider from './components/context/CartContext';
 
 

@@ -9,7 +9,6 @@ const [cart, setCart] = useState([])
 const [cartTotal, setCartTotal] = useState(0)
 const [totalItems, setTotalItems] = useState(0)
 const [mayor, setMayor] = useState()
-const [menor, setMenor] =useState()
 
 
 
@@ -20,7 +19,8 @@ const addItem = (data) => {
       const updatedCart = cart.map((producto)=>{
           if(producto.id === data.id){
               return {...data, cantidad: producto.cantidad + data.cantidad}
-          }else{
+          }
+          else{
               return producto            
           }
       })
@@ -29,7 +29,6 @@ const addItem = (data) => {
   }else{
       setCart([...cart, data])
       cantInCard(data.cantidad)
-      console.log(cart, "nueva cart")
   }   
 }
 
@@ -55,13 +54,10 @@ const totalPrice = () => {
 const cantInCard = (cantidad) => {
   let cardItem = !totalItems ? cantidad : totalItems + cantidad;
   setTotalItems(cardItem)
-  console.log("cant", cantidad, totalItems)
 }
 
 const edadAdulta = (esMayor) => {
- setMayor(esMayor)
- console.log(mayor, "la edad")
-}
+ setMayor(esMayor)}
 
 const valueForChildren = {  
   cart,
@@ -74,7 +70,6 @@ const valueForChildren = {
   totalItems,
   edadAdulta,
   mayor,
-  menor,
 }
   return (
     <CartContext.Provider value={valueForChildren}>

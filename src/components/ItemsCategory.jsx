@@ -24,7 +24,6 @@ useEffect(()=> {
             ...producto.data()
         })))
     })
- console.log(listaImagenes, "otras otras")
 },[])
 
 

@@ -9,7 +9,6 @@ import { doc, getDoc, getFirestore } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
 	const {id} = useParams ()
-	console.log({id})
 	const [producto, setProducto] = useState()
 	useEffect(()=> {
 	  const db = getFirestore();
@@ -22,7 +21,6 @@ const ItemDetailContainer = () => {
 		  ...snapshot.data()
 		}
 		setProducto(data)
-		console.log(data)
 	  }
 	})
 	.catch((error)=> console.error(error))

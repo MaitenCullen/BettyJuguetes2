@@ -1,15 +1,18 @@
 
 import React from 'react'
+import './NavBar.css';
+
 
 
 
 const NotAdult =()=> {
   return (
+    <div className='forbidden'>
         <p>
-          Change this and that and try again. Duis mollis, est non commodo
-          luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-          Cras mattis consectetur purus sit amet fermentum.
+        Hola! esta pagina es exclusiva para personas mayores de 18 años. 
+        Te invitamos a que cuando llegas a esa edad nos visites. 
         </p>
+    </div> 
   )
 }
 

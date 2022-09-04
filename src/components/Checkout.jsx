@@ -29,9 +29,7 @@ const terminarCompra =(event) => {
         fecha: serverTimestamp()
          })
          .then ((response) => {
-            console.log("buenas", response)
             setOrderId(response.id)
-            console.log(context.cart, "total carrito")
             if (response) {
                 context.clear()
             }
@@ -40,7 +38,7 @@ const terminarCompra =(event) => {
     }
 
   return (
-    <>
+    <div className='div_fin'>
     {!orderId ?
         <div className='form_div'>
         <h2> holii ya es el final de tu compra</h2>
@@ -57,7 +55,7 @@ const terminarCompra =(event) => {
         <p> su numero de orden es: {orderId}</p>
         <button onClick={()=> navigate('/')}> volver a inicio</button>
     </div>}
-    </>
+    </div>
   )
 }
 

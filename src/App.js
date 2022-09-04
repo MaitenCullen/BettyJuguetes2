@@ -20,13 +20,11 @@ import NotAdult from './components/layouts/NotAdult';
 
 function App() {
   const context = useContext(CartContext)
-  console.log(context, "el mayor")
   return (
     
     <div className='App'>
-   
-      <AlertBetty/>
       <NavBarExample/>
+      <AlertBetty/>
       {context.mayor === true  ?
       <section className='center'>
         <Routes>
@@ -44,7 +42,6 @@ function App() {
       <div className="card_footer">
       </div>
     </div>
-    
   );
 }
 

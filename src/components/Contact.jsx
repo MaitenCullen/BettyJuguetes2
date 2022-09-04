@@ -1,15 +1,13 @@
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import chose from '../imgSRC/chose.jpg';
 import './components.css';
-import { CartContext } from './context/CartContext';
 import { db } from './firestore/Firestore';
 
 
 const Contact = () =>{
     const navigate = useNavigate()
-    const context = useContext(CartContext)
     const[user, setUser] = useState({})
     const [mesaje, setMesaje] =useState('')
     const userProfile = (event) => {
@@ -30,9 +28,7 @@ const Contact = () =>{
             fecha: serverTimestamp()
              })
              .then ((response) => {
-                console.log("buenas", response)
                 setMesaje(response.id)
-                console.log(mesaje,"usuario")
              })
             }
 

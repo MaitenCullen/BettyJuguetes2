@@ -33,8 +33,7 @@ const ItemDetail =(props) => {
       descripcion:props.producto.Descripcion,
       precioTotal:props.producto.precio*cantidad
     }
-    context.addItem(data)
-    
+      context.addItem(data)
 }
 
 const item = props.producto
@@ -71,13 +70,12 @@ const item = props.producto
           <div id="Product_add">
                     {message === '' || <p> {message}</p>}
             </div> 
-            <div className="action">
-            { buyProduct ?
+            <div className="action">       
+            <ItemCount counter={counter} setCounter={setCounter} stock ={10} onAdd={onAdd} />
             <div> 
-              <Button id='button_product1' onClick={()=>{navigate(`/Cart`)}}> Ir al carrito</Button>
+            { buyProduct ? <Button id='button_product1' onClick={()=>{navigate(`/Cart`)}}> Ir al carrito</Button> : null }
               <Button id='button_product2'onClick={()=>{navigate(`/categorias`)}}>Seguir comprando</Button>
             </div>
-            : <ItemCount counter={counter} setCounter={setCounter} stock ={10} onAdd={onAdd} />}
             </div>
           </div>
       </div>

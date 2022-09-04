@@ -2,6 +2,9 @@ import {GiShoppingCart} from 'react-icons/gi';
 import {CartContext} from '../context/CartContext'
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import './NavBar.css';
+
+
 
 
 function CartWidget() {
