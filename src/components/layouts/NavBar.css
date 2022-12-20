@@ -1,4 +1,87 @@
 
+
+
 .NavBG{
-    background-color: rgb(175, 102, 243);
+    background-color: #646093;
   }
+
+.Betty{
+  max-height: 50px;
+  max-width: 50px;
+}
+
+.text1{
+  font-size: 15px;
+  color: antiquewhite;
+}
+
+/*CART CART WIDGET*/
+.Cart1{
+  color: rgb(234, 160, 12);
+  font-size: 30px;
+}
+.Cart_Div a{
+  color: rgb(234, 160, 12);
+  text-decoration: none;
+}
+.Cart_Div{
+  display: flex;
+  flex-wrap: nowrap;
+}
+.forbidden{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../../imgSRC/Old\ day-rafiki.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.forbidden p{
+  height: 600px;
+  width: 50%;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+/*Alert*/
+
+.alert_div{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+#alert_style{
+  background-color: #e438aa81;
+  margin-top: 25px;
+  margin-bottom: 590px;
+}
+#adult{
+  background-color: rgb(196, 133, 255);
+  border-color: rgb(142, 99, 182);
+}
+#adult:active{
+  background-color: rgb(182, 144, 218);
+}
+#adult:hover{
+  background-color: #8b87bb;
+}
+#adult:focus{
+  box-shadow: 0 0 0 0.25rem rgba(219, 49, 253, 0.5)
+}
+
+#not_adult{
+  background-color: blueviolet;
+  border-color: rgb(74, 39, 104)
+}
+#not_adult:active{
+  background-color: rgb(91, 25, 153);
+}
+#not_adult:hover{
+  background-color: #646093;
+}
+#not_adult:focus{
+  box-shadow: 0 0 0 0.25rem rgba(219, 49, 253, 0.5)
+}
