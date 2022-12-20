@@ -1,5 +1,6 @@
-import './components.css';
+
 import home from '../imgSRC/home.jpg';
+import './components.css';
 
 
 

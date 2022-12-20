@@ -35,7 +35,6 @@
     align-items: center;
   }
   .card_body > .half {
-    font-size: 30px;
     text-align: center;
     box-sizing: border-box;
     padding: 10px;
@@ -56,9 +55,9 @@
   }
 
 
+
  .img_detail{
-  width:450px;
-  height: 470px;
+  width:60%;
   box-shadow:0 0 15px #634790;
   border-radius: 5%;
  }
@@ -87,6 +86,35 @@
     font-size: 30px;
     color: #7c3bd8;
   }
+
+  @media(max-width:600px){
+    .div_category_imagen{
+      flex-direction: column;
+    }
+    .div_category_imagen div{
+      display: flex;
+      justify-content: center;
+    }
+    .image_category{
+      width: 80%;
+    }
+  }
+  @media(max-width:600px){
+    .card_body{
+      flex-direction: column;
+    }
+    .title h3{
+      font-size: 20px;
+      margin: 10px;
+    }
+    .card_body > .half2{
+      width: 100%;
+    }
+    .description p{
+      width: 100%;
+    }
+  }
+  
   /*ESTRELLAS*/
    .card_body .reviews .stars {
     display: inline-block;

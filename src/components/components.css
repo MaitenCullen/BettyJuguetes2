@@ -108,10 +108,23 @@ height: 300px;
   display: flex;
     align-items: center;
 }
-
+@media(max-width:600px){
+  .contact_section h1 {
+    text-align: center;
+  }
+  .div_contact{
+    flex-direction: column;
+  }
+  .div_contact div {
+    display: flex;
+    justify-content: center;
+  }
+  .chose_img{
+    width: 60%;
+  }
+}
 .chose_img{
-    width: 450px;
-    height: 500px;
+    width: 60%;
     box-shadow: 0 0 10px #634790;
     margin: 10px;
   }
@@ -161,8 +174,7 @@ height: 300px;
   /*HOME */ 
 
   .img_home{
-    width: 750px;
-    height: 500px;
+    width: 60%;
     box-shadow: 0 0 10px #634790;
     margin: 10px;
   }
@@ -195,6 +207,21 @@ height: 300px;
     text-align: center;
   }
 
+  @media(max-width: 600px){
+    .section_home{
+      flex-direction: column;
+    }
+    .section_home div {
+      display: flex;
+      justify-content: center;
+    }
+    .img_home{
+      width: 60%;
+    }
+    .p_div{
+      width: 100%;
+    }
+  }
   /*CART PRODUCTS*/
 
   .img_card_product{
@@ -317,6 +344,25 @@ height: 300px;
   justify-content: center;
    
 }  
+@media(max-width:600px){
+  .table1{
+    width: 100%;
+  }
+  .tr_style{
+   display: none;
+  }
+  .table_color{
+    width: 100%;
+  }
+  .table_color li{
+    margin: 1%;
+    
+  }
+  .table_foot{
+    display: flex;
+    align-items: center;
+}
+}
 
 /*CHECK OUT*/
 .div_fin{
@@ -347,3 +393,8 @@ height: 300px;
   align-items: center;
   justify-content: center;
 }
+@media(max-width:600px){
+  .order_div h2{
+    text-align: center;
+    }
+  }
